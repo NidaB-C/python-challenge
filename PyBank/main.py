@@ -59,10 +59,10 @@ print(f"Greatest Decrease in Profits: {greatest_decrease['Date']} (${greatest_de
 output_file = os.path.join("..","PyBank","analysis","Financial Analysis.txt")
 
 with open(output_file, "w") as txtfile:
-    txtfile.write("Financial Analysis\\n")
-    txtfile.write("-" * 30 + "\\n")
-    txtfile.write(f"Total Months: {total_months}\\n")
-    txtfile.write(f"Total: ${total_amount}\\n")
-    txtfile.write(f"Average Change: ${average_change}\\n")
-    txtfile.write(f"Greatest Increase in Profits: {greatest_increase['Date']} (${greatest_increase['Amount']})\\n")
-    txtfile.write(f"Greatest Decrease in Profits: {greatest_decrease['Date']} (${greatest_decrease['Amount']})\\n")
+    txtfile.write("Financial Analysis\n")
+    txtfile.write("-" * 30 + "\n")
+    txtfile.write(f"Total Months: {total_months}\n")
+    txtfile.write(f"Total: ${total_amount}\n")
+    txtfile.write(f"Average Change: ${average_change}\n")
+    txtfile.write(f"Greatest Increase in Profits: {greatest_increase['Date']} (${greatest_increase['Amount']})\n")
+    txtfile.write(f"Greatest Decrease in Profits: {greatest_decrease['Date']} (${greatest_decrease['Amount']})\n")
