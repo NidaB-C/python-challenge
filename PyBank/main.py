@@ -1,6 +1,7 @@
 import csv
 import os
 
+#Set path for csv file - absolute path was used for development - has been changed to relative path for GitHub
 budget_data = os.path.join("..","python-challenge","PyBank","Resources","budget_data.csv")
 
 #Initialise variables
@@ -13,11 +14,12 @@ prev_amount = None
 greatest_increase = {"Date": "","Amount":float("-inf")}
 greatest_decrease = {"Date": "", "Amount":float("inf")}
 
-#Read the CSV file 
-with open (budget_data) as csvfile:
+#Read the CSV file and store the header
+with open (budget_data, "r") as csvfile:
     csv_reader = csv.reader(csvfile, delimiter=",")
     header = next(csv_reader)
 
+    #Define variables in each column
     for row in csv_reader:
         date = row[0]
         amount = int(row[1])
@@ -58,6 +60,7 @@ print(f"Greatest Decrease in Profits: {greatest_decrease['Date']} (${greatest_de
 #Save the output file path
 output_file = os.path.join("..","PyBank","analysis","Financial Analysis.txt")
 
+#Open and print output in the text file 
 with open(output_file, "w") as txtfile:
     txtfile.write("Financial Analysis\n")
     txtfile.write("-" * 30 + "\n")
