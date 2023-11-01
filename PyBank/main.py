@@ -1,7 +1,7 @@
 import csv
 import os
 
-budget_data = os.path.join("/Users","nida","Documents","Data Analytics","Module 3 - Python","Challenge - 3","python-challenge","PyBank","Resources","budget_data.csv")
+budget_data = os.path.join("..","python-challenge","PyBank","Resources","budget_data.csv")
 
 #Initialise variables
 total_months = 0
